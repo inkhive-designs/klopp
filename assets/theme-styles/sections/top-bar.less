@@ -1,0 +1,12 @@
+#top-bar {
+  background: darken(@background,3%);
+  box-shadow: 0px 2px 2px 1px fade(#000,30%);
+  z-index: 99;
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: none;
+    box-shadow: none;
+  }
+}

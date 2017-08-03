@@ -1,0 +1,55 @@
+.klopp {
+  border-bottom: none;
+  position: relative;
+  overflow: auto;
+  .featured-thumb {
+    background: @pattern repeat;
+    border-top: none;
+    padding: 8px;
+    position: relative;
+    .postedon {
+      position: absolute;
+      background: @accent;
+      a { color: @background; }
+      padding: 6px;
+      text-transform: uppercase;
+      left: 12px;
+      top: 12px;
+    }
+    &:hover {
+      img {
+        .transform(none);
+        filter: brightness(0.8);
+        -webkit-filter: brightness(0.8);
+      }
+
+    }
+  }
+  .out-thumb {
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+    h1.entry-title {
+      font-size: 33px;
+    }
+    .readmore {
+      margin-top: 15px;
+      a {
+        color: @s-accent;
+        border: solid 1px @s-accent;
+        padding: 8px 15px;
+        background: @s-accent;
+        text-transform: uppercase;
+        -webkit-transition-duration: 0.1s;
+        transition-duration: 0.1s;
+        &:before {
+          background: white;
+        }
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+
+}
