@@ -2,7 +2,6 @@
 /*
 ** Template to Render Social Icons on Top Bar
 */
-
 for ($i = 1; $i < 8; $i++) : 
 	$social = get_theme_mod('klopp_social_'.$i);
 	if ( ($social != 'none') && ($social != '') ) : ?>

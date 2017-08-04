@@ -94,7 +94,7 @@
     box-shadow: 1px 0px 0px #f7f7f7;
     padding-right: 15px;
   }
-  .social-icons a {
+  .social-icons .none {
     margin-right: 5px;
 
     text-align: center;
@@ -110,6 +110,103 @@
     &:hover {
       img {
         .transform(scale(1.2));
+      }
+    }
+  }
+
+  .social-icons .style1 {
+    margin-right: 5px;
+
+    text-align: center;
+
+    img {
+      width: 37px;
+      height: 37px;
+      .transition( ease 0.6s );
+    }
+    @media screen and (max-width: 600px) {
+      float: none;
+    }
+    &:hover {
+      img {
+        box-shadow: 0 3px 8px 0 @accent;
+        animation-name: hvr-pulse-grow;
+        transform:scale(1.2);
+        animation-duration: 0.6s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+    }
+  }
+
+  .social-icons .style2 {
+    margin-right: 5px;
+
+    text-align: center;
+
+    img {
+      width: 37px;
+      height: 37px;
+      border-radius:23px;
+      opacity: 0.7;
+    }
+    @media screen and (max-width: 600px) {
+      float: none;
+    }
+    &:hover {
+      img {
+        border-radius:23px;
+        animation-name: hvr-pulse-grow;
+        animation-duration: 0.3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        opacity: 100;
+      }
+    }
+  }
+
+  .social-icons .style3 {
+    margin-right: 5px;
+
+    text-align: center;
+
+    img {
+      width: 37px;
+      height: 37px;
+      transform: translateZ(0);
+      border-radius:10px;
+    }
+    @media screen and (max-width: 600px) {
+      float: none;
+    }
+    &:hover {
+      img {
+        transform: scale(0.9);
+        border-radius:10px;
+      }
+    }
+  }
+
+  .social-icons .style4 {
+    margin-right: 5px;
+
+    text-align: center;
+
+    img {
+      width: 37px;
+      height: 37px;
+      transform: translateZ(0);
+      transition-duration: 0.5s;
+      border-radius:10px;
+    }
+    @media screen and (max-width: 600px) {
+      float: none;
+    }
+    &:hover {
+      img {
+        transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+        transform: scale(1.2);
+        border-radius:10px;
       }
     }
   }
