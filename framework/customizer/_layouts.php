@@ -166,5 +166,43 @@ function klopp_customize_register_layouts($wp_customize){
             'type' => 'text'
         )
     );
+
+    //Content Font Size Control
+    $font_size = array(
+        '14px' => 'Default',
+        'initial' => 'Initial',
+        'small' => 'Small',
+        'medium' => 'Medium',
+        'large' => 'Large',
+        'larger' => 'Larger',
+        'x-large' => 'Extra Large',
+    );
+
+    $wp_customize-> add_section(
+        'klopp_content_font_size_section',
+        array(
+            'title'			=> __('Content Font SIze','klopp'),
+            'label'    => __( 'Custom Content Font Size','klopp' ),
+            'priority'		=> 12,
+            'panel'			=> 'klopp_design_panel'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'klopp_content_font_size', array(
+            'default' => ''
+        )
+    );
+
+    $wp_customize->add_control(
+        'klopp_content_font_size', array(
+            'settings' => 'klopp_content_font_size',
+            'label' => __( 'Content Font Size','klopp' ),
+            'description' => __('Select Font Size', 'klopp'),
+            'section'  => 'klopp_content_font_size_section',
+            'type'     => 'select',
+            'choices' => $font_size
+        )
+    );
 }
 add_action('customize_register', 'klopp_customize_register_layouts');

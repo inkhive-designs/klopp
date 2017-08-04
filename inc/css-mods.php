@@ -91,6 +91,11 @@ function klopp_custom_css_mods() {
 		echo "#masthead .custom-logo { transform: scale(".$val."); -webkit-transform: scale(".$val."); -moz-transform: scale(".$val."); -ms-transform: scale(".$val."); }";
 		endif;
 
+	if ( get_theme_mod('klopp_content_font_size') ) :
+        $size = (get_theme_mod('klopp_content_font_size'));
+	    echo "#primary-mono .entry-content { font-size:".$size.";}";
+    endif;
+
 	echo "</style>";
 }
 
