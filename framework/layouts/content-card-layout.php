@@ -23,6 +23,4 @@
         </header><!-- .entry-header -->
     </div><!--.out-thumb-->
 
-
-
 </article><!-- #post-## -->
