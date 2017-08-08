@@ -1,13 +1,13 @@
-/* Grid */
-.grid {
+/* Card Layout */
+.card-layout {
   margin: 10px 0;
-  padding-left: 0;
-  padding-bottom: 17px;
+  padding: 12px;
   border-bottom: solid 1px #eee;
   @media screen and (max-width: 768px) {
     border-bottom: none;
   }
   &:nth-child(odd) {
+    background-color:lighten(@content, 55%);
   }
   &:nth-child(even) {
   }
@@ -29,13 +29,13 @@
       }
     }
     img {
-      .transition(0.4s all ease);
+      padding:0;
+      .transition(0.3s all ease);
     }
     &:hover {
       img {
-        .transition(0.4s all ease);
-        .transform( scale(1.1) );
-
+        .transition(1s all ease);
+        .transform( scale(1.4) );
 
       }
     }
@@ -50,11 +50,11 @@
       font-weight: normal;
       font-size: 19px;
       a {
-        color: darken(@content,25%);
+        color: darken(@accent,25%);
         padding-bottom: 2px;
         &:before {
           height: 2px;
-          background: darken(@content,25%);
+          background: @accent;
           width: 96%;
           left: 2%;
         }
@@ -82,6 +82,18 @@
   .readmore {
     display: block;
     clear: both;
+    margin-top: 16px;
+    a {
+      padding: 5px 8px;
+      color: @background;
+      background: @accent;
+      .transition(0.4s all ease);
+      &:hover {
+        padding: 5px 8px;
+        color: @accent;
+        background:@background;
+      }
+    }
   }
   .hvr-underline-from-center:before {
     height: 1px;
@@ -89,7 +101,7 @@
   }
 }
 
-.grid_2_column {
+.card_2_column {
   padding: 0;
   border-bottom: none;
   .out-thumb {
@@ -112,15 +124,6 @@
 
 }
 
-.grid_3_column {
-  padding: 0 10px;
-  @media screen and (min-width: 768px) {
-    &:nth-of-type(odd) {
-      padding-right: 10px;
-      clear: none;
-    }
-    &:nth-of-type(3n+1) {
-      clear: left;
-    }
-  }
+.card {
+  border-bottom:2px solid @content;
 }

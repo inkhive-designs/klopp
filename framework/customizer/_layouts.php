@@ -24,7 +24,7 @@ function klopp_customize_register_layouts($wp_customize){
     );
 
     function klopp_sanitize_blog_layout( $input ) {
-        if ( in_array($input, array('grid','grid_2_column','grid_3_column','klopp') ) )
+        if ( in_array($input, array('grid','grid_2_column','grid_3_column','klopp', 'card-layout') ) )
             return $input;
         else
             return '';
@@ -41,6 +41,7 @@ function klopp_customize_register_layouts($wp_customize){
                 'grid' => __('Basic Blog Layout','klopp'),
                 'grid_2_column' => __('Grid - 2 Column','klopp'),
                 'grid_3_column' => __('Grid - 3 Column','klopp'),
+                'card-layout' => __('Card Layout', 'klopp'),
 
             )
         )
