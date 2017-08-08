@@ -11,7 +11,7 @@
     margin-top: 20px;
   }
   span {
-    background: @background;
+    background: @background;   
     position: relative;
     padding: 25px 15px;
     padding-left: 0;
@@ -21,7 +21,7 @@
     content: "";
     display: block;
     width: 96%;
-    height: 11px;
+    height: 11px;  
     background: @pattern;
     border-top: none;
     position: absolute;
@@ -31,9 +31,12 @@
   }
 }
 
-.page #masthead .container {
-  border-bottom: solid 1px darken(@background, 5%);
+//bug fix
+.page #primary-mono h1.entry-title {
+	background: none;
+	padding-left: 0;
 }
+
 
 .edit-link {
   display: inline-block;

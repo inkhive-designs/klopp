@@ -21,7 +21,7 @@ function klopp_scripts() {
 
     wp_enqueue_style( 'hover-style', get_template_directory_uri() . '/assets/css/hover.min.css' );
 
-    wp_enqueue_style( 'klopp-main-theme-style', get_template_directory_uri() . '/assets/theme-styles/skins/default.css' );
+    wp_enqueue_style( 'klopp-main-theme-style', get_template_directory_uri() . '/assets/theme-styles/css/default.css' );
 
     wp_enqueue_script( 'klopp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

@@ -95,6 +95,15 @@ function klopp_custom_css_mods() {
         $size = (get_theme_mod('klopp_content_font_size'));
 	    echo "#primary-mono .entry-content { font-size:".$size.";}";
     endif;
+    
+    if (is_page() && has_post_thumbnail()) :
+    	global $post;
+   		$image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
+   		var_dump($image);
+    	echo "#masthead {
+                    background-image: url('". $image[0]."') !important;;
+                }";
+    endif;            
 
 	echo "</style>";
 }

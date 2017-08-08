@@ -17,15 +17,7 @@ get_header(); ?>
 <div id="primary-mono" class="content-area col-md-12 page">
     <main id="main" class="site-main" role="main">
 
-        <?php while ( have_posts() ) : the_post();
-        if (has_post_thumbnail( $post->ID ) ): ?>
-            <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail'); ?>
-            <style>
-                #masthead {
-                    background-image: url('<?php echo $image[0]; ?>');
-                }
-            </style>
-        <?php endif; ?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
             <?php get_template_part( '/modules/content/content', 'page' ); ?>
 

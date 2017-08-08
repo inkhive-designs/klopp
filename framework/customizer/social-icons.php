@@ -27,7 +27,24 @@ function klopp_customize_register_social_icons($wp_customize){
         'style4' => __('Style 4', 'klopp'),
     );
 
-    $wp_customize->add_setting('klopp_social_icon_style');
+    $wp_customize->add_setting('klopp_social_icon_style', array(
+	    'default' => 'none',
+	    'sanitize_callback' => 'klopp_sanitize_social_style'
+    ));
+    
+    function klopp_sanitize_social_style( $input ) {
+        $social_styles = array(
+            'none' ,
+            'style1',
+            'style2',
+            'style3',
+            'style4',
+        );
+        if ( in_array($input, $social_styles) )
+            return $input;
+        else
+            return '';
+    }
 
     $wp_customize->add_control('klopp_social_icon_style', array(
             'setting' => 'klopp_social_icon_style',
