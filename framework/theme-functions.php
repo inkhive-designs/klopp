@@ -3,6 +3,14 @@
  * @package klopp, Copyright Rohit Tripathi, rohitink.com
  * This file contains Custom Theme Related Functions.
  */
+//Import Admin Modules
+require get_template_directory() . '/framework/admin_modules/register_styles.php';
+require get_template_directory() . '/framework/admin_modules/register_widgets.php';
+require get_template_directory() . '/framework/admin_modules/theme_setup.php';
+require get_template_directory() . '/framework/admin_modules/nav_walkers.php';
+require get_template_directory() . '/framework/admin_modules/admin_styles.php';
+require get_template_directory() . '/framework/admin_modules/logo_compatibility.php';
+
 /*
  * Pagination Function. Implements core paginate_links function.
  */
@@ -26,14 +34,6 @@ function klopp_pagination() {
 	           echo '</ul></div></div>';
 	 }
 }
-
-//Import Admin Modules
-require get_template_directory() . '/framework/admin_modules/register_styles.php';
-require get_template_directory() . '/framework/admin_modules/register_widgets.php';
-require get_template_directory() . '/framework/admin_modules/theme_setup.php';
-require get_template_directory() . '/framework/admin_modules/nav_walkers.php';
-require get_template_directory() . '/framework/admin_modules/admin_styles.php';
-require get_template_directory() . '/framework/admin_modules/logo_compatibility.php';
 
 /*
 ** Function to check if Sidebar is enabled on Current Page 

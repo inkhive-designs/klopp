@@ -1271,8 +1271,9 @@ aside:nth-child(odd) {
   top: 27%;
   z-index: 0;
 }
-.page #masthead .container {
-  border-bottom: solid 1px #f2f2f2;
+.page #primary-mono h1.entry-title {
+  background: none;
+  padding-left: 0;
 }
 .edit-link {
   display: inline-block;
@@ -2063,8 +2064,8 @@ aside:nth-child(odd) {
 }
 /* Card Layout */
 .card-layout {
-  margin: 10px 0;
-  padding: 12px;
+  margin: 0px 0;
+  padding: 32px 12px;
   border-bottom: solid 1px #eee;
 }
 @media screen and (max-width: 768px) {
@@ -2073,132 +2074,62 @@ aside:nth-child(odd) {
   }
 }
 .card-layout:nth-child(odd) {
-  background-color: #f2f2f2;
+  background-color: #f0f0f0;
+}
+.card-layout:nth-child(even) {
+  background-color: #f7f7f7;
 }
 .card-layout:nth-last-child(2) {
   border: none;
 }
 .card-layout .featured-thumb {
-  border-top: #69dc9e solid 3px;
-  overflow: hidden;
-  transition: 0.4s all ease;
-  -webkit-transition: 0.4s all ease;
-  -moz-transition: 0.4s all ease;
-  -ms-transition: 0.4s all ease;
-  -o-transition: 0.4s all ease;
+  border-top: none;
+}
+.card-layout img {
   padding: 0;
+  transition: 0.7s all ease;
+  -webkit-transition: 0.7s all ease;
+  -moz-transition: 0.7s all ease;
+  -ms-transition: 0.7s all ease;
+  -o-transition: 0.7s all ease;
 }
-@media screen and (max-width: 992px) and (min-width: 768px) {
-  .card-layout .featured-thumb {
-    overflow: visible;
-  }
-}
-@media screen and (max-width: 768px) {
-  .card-layout .featured-thumb img {
-    width: 100%;
-  }
-}
-.card-layout .featured-thumb img {
-  padding: 0;
-  transition: 0.3s all ease;
-  -webkit-transition: 0.3s all ease;
-  -moz-transition: 0.3s all ease;
-  -ms-transition: 0.3s all ease;
-  -o-transition: 0.3s all ease;
-}
-.card-layout .featured-thumb:hover img {
+.card-layout:hover img {
   transition: 1s all ease;
   -webkit-transition: 1s all ease;
   -moz-transition: 1s all ease;
   -ms-transition: 1s all ease;
   -o-transition: 1s all ease;
-  transform: scale(1.4);
-  -webkit-transform: scale(1.4);
-  -moz-transform: scale(1.4);
-  -ms-transform: scale(1.4);
-  -o-transform: scale(1.4);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
-@media screen and (max-width: 768px) {
-  .card-layout .out-thumb {
-    padding: 10px 3px;
-  }
+.card-layout .out-thumb .author {
+  background: black;
+  color: #eee;
 }
-.card-layout .out-thumb h1 {
-  margin: 5px 0;
-  margin-top: 1px;
-  font-weight: normal;
-  font-size: 19px;
+.card-layout .out-thumb .date {
+  background: #e59f71;
+  color: #ffffff;
 }
-.card-layout .out-thumb h1 a {
-  color: #25a05e;
-  padding-bottom: 2px;
-}
-.card-layout .out-thumb h1 a:before {
-  height: 2px;
-  background: #69dc9e;
-  width: 96%;
-  left: 2%;
-}
-.card-layout .out-thumb .postedon {
-  font-size: 12px;
-  color: #aaa;
-  font-weight: lighter;
-  margin-bottom: 5px;
-}
-.card-layout .out-thumb .postedon a {
-  color: #999;
-  text-decoration: underline;
+.card-layout .out-thumb .author,
+.card-layout .out-thumb .date {
+  display: inline-block;
+  margin-right: 10x;
+  float: left;
+  padding: 5px 10px;
 }
 .card-layout .out-thumb .entry-excerpt {
-  color: #666;
-  line-height: 1.6em;
-  font-weight: 400;
-}
-.card-layout .readmore {
+  margin-top: 10px;
   display: block;
-  clear: both;
-  margin-top: 16px;
+  margin-bottom: 10px;
 }
-.card-layout .readmore a {
-  padding: 5px 8px;
+.card-layout .out-thumb h1 {
+  font-size: 25px;
+}
+.card-layout .out-thumb .readmore a {
+  background: #69dc9e;
   color: #ffffff;
-  background: #69dc9e;
-  transition: 0.4s all ease;
-  -webkit-transition: 0.4s all ease;
-  -moz-transition: 0.4s all ease;
-  -ms-transition: 0.4s all ease;
-  -o-transition: 0.4s all ease;
-}
-.card-layout .readmore a:hover {
-  padding: 5px 8px;
-  color: #69dc9e;
-  background: #ffffff;
-}
-.card-layout .hvr-underline-from-center:before {
-  height: 1px;
-  background: #69dc9e;
-}
-.card_2_column {
-  padding: 0;
-  border-bottom: none;
-}
-.card_2_column .out-thumb {
-  padding: 12px 0;
-}
-@media screen and (max-width: 768px) {
-  .card_2_column {
-    padding-right: 0px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .card_2_column:nth-of-type(even) {
-    padding-left: 10px;
-  }
-  .card_2_column:nth-of-type(odd) {
-    padding-right: 10px;
-    clear: left;
-  }
-}
-.card {
-  border-bottom: 2px solid #666666;
+  padding: 5px;
 }

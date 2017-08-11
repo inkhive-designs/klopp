@@ -2,9 +2,6 @@
 /*
 ** Customizer Controls
 */
-/*
-** Customizer Controls
-*/
 if (class_exists('WP_Customize_Control')) {
     class WP_Customize_Category_Control extends WP_Customize_Control {
         /**

@@ -182,8 +182,8 @@ function klopp_customize_register_layouts($wp_customize){
     $wp_customize-> add_section(
         'klopp_content_font_size_section',
         array(
-            'title'			=> __('Content Font SIze','klopp'),
-            'label'    => __( 'Custom Content Font Size','klopp' ),
+            'title'			=> __('Content Font Size','klopp'),
+            'label'    => __( 'Custom Content Font Size.','klopp' ),
             'priority'		=> 12,
             'panel'			=> 'klopp_design_panel'
         )
@@ -191,15 +191,25 @@ function klopp_customize_register_layouts($wp_customize){
 
     $wp_customize->add_setting(
         'klopp_content_font_size', array(
-            'default' => ''
+            'default' => '14px',
+            'sanitize_callback' => 'klopp_sanitize_fontsize'
         )
     );
+    
+    function klopp_sanitize_fontsize( $input ) {
+        if ( in_array($input, array('14px','initial','small','medium','large','larger','x-large') ) )
+            return $input;
+        else
+            return '';
+    }
+    
+    
 
     $wp_customize->add_control(
         'klopp_content_font_size', array(
             'settings' => 'klopp_content_font_size',
             'label' => __( 'Content Font Size','klopp' ),
-            'description' => __('Select Font Size', 'klopp'),
+            'description' => __('Select Font Size. This is only for the Posts and Pages area. Not for Blog Page or archives.', 'klopp'),
             'section'  => 'klopp_content_font_size_section',
             'type'     => 'select',
             'choices' => $font_size
