@@ -67,15 +67,15 @@ function klopp_custom_css_mods() {
 	if ( get_theme_mod('klopp_body_font','Source Sans Pro') ) :
 		echo "body { font-family: ".esc_html(get_theme_mod('klopp_body_font'))."; }";
 	endif;
-	
-	if ( get_theme_mod('klopp_site_titlecolor') ) :
-		echo "#masthead h1.site-title a { color: ".esc_html(get_theme_mod('klopp_site_titlecolor', '#FFF'))."; }";
-	endif;
-	
-	
-	if ( get_theme_mod('klopp_header_desccolor','#777') ) :
-		echo "#masthead h2.site-description { color: ".esc_html(get_theme_mod('klopp_header_desccolor','#FFF'))."; }";
-	endif;
+
+    if ( get_header_textcolor() ) :
+        echo "#masthead h1.site-title a { color: #".get_header_textcolor()."; }";
+    endif;
+
+
+    if ( get_theme_mod('klopp_header_desccolor','#FFF') ) :
+        echo "#masthead h2.site-description { color: ".esc_html(get_theme_mod('klopp_header_desccolor','#000'))."; }";
+    endif;
 	
 	if ( get_theme_mod('klopp_custom_css') ) :
 		echo  esc_html(get_theme_mod('klopp_custom_css'));
