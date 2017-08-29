@@ -27,42 +27,6 @@ function klopp_customize_register_header($wp_customize){
         return $option->value() == true;
     }
 
-
-    //Replace Header Text Color with, separate colors for Title and Description
-    //Override klopp_site_titlecolor
-    $wp_customize->remove_control('display_header_text');
-    $wp_customize->remove_setting('header_textcolor');
-    $wp_customize->add_setting('klopp_site_titlecolor', array(
-        'default'     => '#FFF',
-        'sanitize_callback' => 'sanitize_hex_color',
-    ));
-
-    $wp_customize->add_control(new WP_Customize_Color_Control(
-            $wp_customize,
-            'klopp_site_titlecolor', array(
-            'label' => __('Site Title Color','klopp'),
-            'section' => 'colors',
-            'settings' => 'klopp_site_titlecolor',
-            'type' => 'color'
-        ) )
-    );
-
-    $wp_customize->add_setting('klopp_header_desccolor', array(
-        'default'     => '#FFF',
-        'sanitize_callback' => 'sanitize_hex_color',
-    ));
-
-    $wp_customize->add_control(new WP_Customize_Color_Control(
-            $wp_customize,
-            'klopp_header_desccolor', array(
-            'label' => __('Site Tagline Color','klopp'),
-            'section' => 'colors',
-            'settings' => 'klopp_header_desccolor',
-            'type' => 'color'
-        ) )
-    );
-
-
     //Settings for Header Image
     $wp_customize->add_setting( 'klopp_himg_style' , array(
         'default'     => 'cover',

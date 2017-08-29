@@ -49,8 +49,15 @@ Version 1.0.2
 	iii) Added option for header featured image on Pages
 	iv) Font Size Option and more..
 	v) New Blog Layout
+<<<<<<< HEAD
 	
 Version 1.0.3
 
 	i) Added Default Social Icon Style	
 		
+=======
+		
+Version 1.0.4
+
+	i) Fixed Site Title and Tagline Colors
+>>>>>>> dev_shiv
