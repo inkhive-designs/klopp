@@ -232,11 +232,11 @@ a:hover {
   box-shadow: 1px 0px 0px #f7f7f7;
   padding-right: 15px;
 }
-#social-search .social-icons .default {
+#social-search .social-icons .none {
   margin-right: 5px;
   text-align: center;
 }
-#social-search .social-icons .default img {
+#social-search .social-icons .none img {
   width: 37px;
   height: 37px;
   transition: ease 0.4s;
@@ -246,11 +246,11 @@ a:hover {
   -o-transition: ease 0.4s;
 }
 @media screen and (max-width: 600px) {
-  #social-search .social-icons .default {
+  #social-search .social-icons .none {
     float: none;
   }
 }
-#social-search .social-icons .default:hover img {
+#social-search .social-icons .none:hover img {
   transform: scale(1.2);
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
