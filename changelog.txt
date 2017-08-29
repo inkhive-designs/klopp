@@ -50,3 +50,6 @@ Version 1.0.2
 	iv) Font Size Option and more..
 	v) New Blog Layout
 		
+Version 1.0.4
+
+	i) Fixed Site Title and Tagline Colors
