@@ -121,4 +121,4 @@ function klopp_customize_register_showcase($wp_customize){
 
     endfor;
 }
-add_action('cutomize_register', 'klopp_customize_register_showcase');
+add_action('customize_register', 'klopp_customize_register_showcase');

@@ -53,3 +53,14 @@ Version 1.0.2
 Version 1.0.4
 
 	i) Fixed Site Title and Tagline Colors
+
+
+Version 1.0.5
+
+    i) Bug Fixes
+    ii) Switched to new framework
+
+Version 1.0.6
+
+    i) Featured Area Bug Fixed
+    ii) Minor Bug Fixes

@@ -74,4 +74,4 @@ function klopp_customize_register_featured_posts($wp_customize){
         )
     );
 }
-add_action('customize_resgister', 'klopp_customize_register_featured_posts');
+add_action('customize_register', 'klopp_customize_register_featured_posts');
