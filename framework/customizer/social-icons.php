@@ -4,6 +4,7 @@ function klopp_customize_register_social_icons($wp_customize){
     $wp_customize->add_section('klopp_social_section', array(
         'title' => __('Social Icons','klopp'),
         'priority' => 44 ,
+        'panel' => 'plum_header_panel'
     ));
 
     $social_networks = array( //Redefinied in Sanitization Function.

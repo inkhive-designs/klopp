@@ -12,16 +12,25 @@
 function klopp_customize_register( $wp_customize ) {
     $wp_customize->get_setting('blogname')->transport = 'postMessage';
     $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
+
+    $wp_customize->add_panel( 'klopp_a_fcp_panel', array(
+        'priority'       => 40,
+        'capability'     => 'edit_theme_options',
+        'theme_supports' => '',
+        'title'          => 'Featured Content Areas',
+        'description'    => '',
+    ) );
 }
 add_action('customize_register', 'klopp_customize_register');
 
 //Load All Individual Settings Based on Sections/Panels.
 require_once get_template_directory().'/framework/customizer/_customizer_controls.php';
-require_once get_template_directory().'/framework/customizer/_custom_css.php';
 require_once get_template_directory().'/framework/customizer/_layouts.php';
 require_once get_template_directory().'/framework/customizer/_googlefonts.php';
 require_once get_template_directory().'/framework/customizer/_sanitization.php';
+require_once get_template_directory().'/framework/customizer/misc-scripts.php';
 require_once get_template_directory().'/framework/customizer/header.php';
+require_once get_template_directory().'/framework/customizer/init.php';
 require_once get_template_directory().'/framework/customizer/colors.php';
 require_once get_template_directory().'/framework/customizer/slider.php';
 require_once get_template_directory().'/framework/customizer/showcase.php';

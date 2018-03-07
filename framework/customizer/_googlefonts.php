@@ -5,10 +5,11 @@ function klopp_customize_register_fonts($wp_customize){
         array(
             'title'     => __('Google Web Fonts','klopp'),
             'priority'  => 41,
+            'panel' => 'plum_header_panel'
         )
     );
 
-    $font_array = array('Yanone Kaffeesatz','Khula','Open Sans','Droid Sans','Droid Serif','Roboto','Roboto Condensed','Lato','Bree Serif','Oswald','Slabo','Lora','Source Sans Pro','PT Sans','Ubuntu','Lobster','Arimo','Bitter','Noto Sans');
+    $font_array = array('Yanone Kaffeesatz','Khula','Open Sans','Droid Sans','Droid Serif','Roboto','Roboto Condensed','Lato','Bree Serif','Oswald','Slabo 27px','Lora','Source Sans Pro','PT Sans','Ubuntu','Lobster','Arimo','Bitter','Noto Sans');
     $fonts = array_combine($font_array, $font_array);
 
     $wp_customize->add_setting(
@@ -20,7 +21,7 @@ function klopp_customize_register_fonts($wp_customize){
     );
 
     function klopp_sanitize_gfont( $input ) {
-        if ( in_array($input, array('Source Sans Pro','Khula','Open Sans','Droid Sans','Droid Serif','Roboto','Roboto Condensed','Lato','Bree Serif','Oswald','Slabo','Lora','PT Sans','Ubuntu','Lobster','Arimo','Bitter','Noto Sans') ) )
+        if ( in_array($input, array('Source Sans Pro','Khula','Open Sans','Droid Sans','Droid Serif','Roboto','Roboto Condensed','Lato','Bree Serif','Oswald','Slabo 27px','Lora','PT Sans','Ubuntu','Lobster','Arimo','Bitter','Noto Sans') ) )
             return $input;
         else
             return '';

@@ -53,60 +53,6 @@ function klopp_customize_register_slider($wp_customize){
     );
 
 
-    $wp_customize->add_section(
-        'klopp_sec_upgrade',
-        array(
-            'title'     => __('Klopp Theme Help & Support','klopp'),
-            'priority'  => 45,
-        )
-    );
-
-    $wp_customize->add_setting(
-        'klopp_upgrade',
-        array( 'sanitize_callback' => 'esc_textarea' )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Upgrade_Control(
-            $wp_customize,
-            'klopp_upgrade',
-            array(
-                'label' => __('Help & Support','klopp'),
-                'description' => __('Thank you for choosing Klopp Theme. For Support Related to Klopp WordPress Theme Please Visit the WordPress <a target="_blank" href="https://wordpress.org/support/theme/klopp">Support Forums</a> or <a  href="https://inkhive.com" target="_blank">InkHive.com</a>','klopp'),
-                'section' => 'klopp_sec_upgrade',
-                'settings' => 'klopp_upgrade',
-            )
-        )
-    );
-
-    $wp_customize->add_section(
-        'klopp_sec_upgrade_pro',
-        array(
-            'title'     => __('Discover Klopp Plus','klopp'),
-            'priority'  => 15,
-        )
-    );
-
-    $wp_customize->add_setting(
-        'klopp_upgrade_pro',
-        array( 'sanitize_callback' => 'esc_textarea' )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Upgrade_Control(
-            $wp_customize,
-            'klopp_upgrade_pro',
-            array(
-                'label' => __('More of Everything','klopp'),
-                'description' => __('Klopp Plus is the extended version of Klopp. It has More Features Including multiple header layouts, google fonts with over 650 choices, Unlimited Colors, Custom Skin Designer, Footer Layouts, Custom Widgets, More Blog Layouts, More Page Layouts and Options, More Featured Areas, More Showcases, Powerful Slider and so much more.  <a  href="https://inkhive.com/product/klopp-plus/" target="_blank">More Details</a>','klopp'),
-                'section' => 'klopp_sec_upgrade_pro',
-                'settings' => 'klopp_upgrade_pro',
-            )
-        )
-    );
-
-
-
     for ( $i = 1 ; $i <= 3 ; $i++ ) :
 
         //Create the settings Once, and Loop through it.

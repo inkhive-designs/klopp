@@ -7,6 +7,7 @@ function klopp_customize_register_featured_posts($wp_customize){
         array(
             'title'     => __('Featured Posts','klopp'),
             'priority'  => 35,
+            'panel'     => 'klopp_a_fcp_panel'
         )
     );
 

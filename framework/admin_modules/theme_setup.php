@@ -58,7 +58,6 @@ if ( ! function_exists( 'klopp_setup' ) ) :
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus( array(
             'primary' => __( 'Primary Menu', 'klopp' ),
-            'top' => __( 'Top Menu', 'klopp' ),
         ) );
 
         /*
@@ -83,9 +82,9 @@ if ( ! function_exists( 'klopp_setup' ) ) :
             'default-image' => '',
         ) ) );
 
-        add_image_size('klopp-pop-thumb',542, 340, true );
-        add_image_size('klopp-featpost-thumb',542, 442, true );
-        add_image_size('klopp-thumb',670, 430, true );
+            add_image_size('klopp-pop-thumb',542, 340, true );
+            add_image_size('klopp-featpost-thumb',542, 442, true );
+            add_image_size('klopp-thumb',670, 430, true );
     }
 endif; // klopp_setup
 add_action( 'after_setup_theme', 'klopp_setup' );

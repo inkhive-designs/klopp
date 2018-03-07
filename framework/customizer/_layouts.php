@@ -38,7 +38,7 @@ function klopp_customize_register_layouts($wp_customize){
             'type' => 'select',
             'choices' => array(
                 'klopp' => __('Klopp Theme Layout','klopp'),
-                'grid' => __('Basic Blog Layout','klopp'),
+                'grid' => __('Standard Blog Layout','klopp'),
                 'grid_2_column' => __('Grid - 2 Column','klopp'),
                 'grid_3_column' => __('Grid - 3 Column','klopp'),
                 'card-layout' => __('Card Layout', 'klopp'),
