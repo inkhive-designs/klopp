@@ -1,12 +1,14 @@
 <?php
 function klopp_customize_register_skin($wp_customize){
     $wp_customize->get_section('colors')->title = __('Colors','klopp');
-    $wp_customize->get_section('colors')->panel = 'plum_header_panel';
+    $wp_customize->get_section('colors')->panel = 'klopp_design_panel';
     $wp_customize->get_control('header_textcolor')->label = __('Site Title Color','klopp');
+    $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
 
     $wp_customize->add_setting('klopp_header_desccolor', array(
         'default'     => '#FFF',
         'sanitize_callback' => 'sanitize_hex_color',
+        'transport'     => 'postMessage',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control(

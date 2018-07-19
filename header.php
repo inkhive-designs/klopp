@@ -30,6 +30,7 @@ get_template_part('modules/header/head'); ?>
 	<div class="mega-container">
 		<?php get_template_part('/framework/featured-components/featured', 'showcase' ); ?>
 		<?php get_template_part('/framework/featured-components/featured', 'posts' ); ?>
+		<?php get_template_part('/framework/featured-components/featured', 'posts2' ); ?>
 		<?php get_template_part('featured', 'content2'); ?>
 		<?php get_template_part('featured', 'content1'); ?>
 	

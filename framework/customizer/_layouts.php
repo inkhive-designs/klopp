@@ -1,6 +1,8 @@
 <?php
 function klopp_customize_register_layouts($wp_customize){
     // Layout and Design
+    $wp_customize->get_section('background_image')->panel = 'klopp_design_panel';
+
     $wp_customize->add_panel( 'klopp_design_panel', array(
         'priority'       => 40,
         'capability'     => 'edit_theme_options',
@@ -155,7 +157,8 @@ function klopp_customize_register_layouts($wp_customize){
         'klopp_footer_text',
         array(
             'default'		=> '',
-            'sanitize_callback'	=> 'sanitize_text_field'
+            'sanitize_callback'	=> 'sanitize_text_field',
+            'transport'     => 'postMessage'
         )
     );
 
@@ -192,7 +195,8 @@ function klopp_customize_register_layouts($wp_customize){
     $wp_customize->add_setting(
         'klopp_content_font_size', array(
             'default' => '14px',
-            'sanitize_callback' => 'klopp_sanitize_fontsize'
+            'sanitize_callback' => 'klopp_sanitize_fontsize',
+            'transport'     => 'postMessage',
         )
     );
     

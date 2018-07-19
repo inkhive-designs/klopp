@@ -3,7 +3,7 @@
 **Contributors:** (inkhive)  
 **Requires at least:** WordPress 4.4  
 **Tested up to:** WordPress 4.9
-**Version:** 1.0.8
+**Version:** 1.1.0
 **License:** GPL v3  
 **License URI:** http://www.gnu.org/licenses/gpl-3.0.html  
 **Tags:** custom-background, two-columns, one-column, custom-colors, flexible-header, theme-options, right-sidebar, grid-layout, custom-menu, threaded-comments, translation-ready, featured-images, blog, full-width-template, e-commerce, footer-widgets, entertainment, photography, featured-image-header
@@ -141,3 +141,8 @@ https://unsplash.com/license
 * Standard Layout Fixed
 * Logo Title Issues Fixed
 * Bug Fixes
+
+### Version 1.1.0
+
+* Customizer Upgraded
+* New Featured Area Added

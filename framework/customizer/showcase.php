@@ -20,7 +20,10 @@ function klopp_customize_register_showcase($wp_customize){
 
     $wp_customize->add_setting(
         'klopp_showcase_enable',
-        array( 'sanitize_callback' => 'klopp_sanitize_checkbox' )
+        array(
+            'sanitize_callback' => 'klopp_sanitize_checkbox',
+            'transport'     => 'postMessage',
+        )
     );
 
     $wp_customize->add_control(
@@ -34,7 +37,10 @@ function klopp_customize_register_showcase($wp_customize){
 
     $wp_customize->add_setting(
         'klopp_showcase_title',
-        array( 'sanitize_callback' => 'sanitize_text_field' )
+        array(
+            'sanitize_callback' => 'sanitize_text_field',
+            'transport'     => 'postMessage'
+        )
     );
 
     $wp_customize->add_control(

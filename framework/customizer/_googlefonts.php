@@ -5,7 +5,7 @@ function klopp_customize_register_fonts($wp_customize){
         array(
             'title'     => __('Google Web Fonts','klopp'),
             'priority'  => 41,
-            'panel' => 'plum_header_panel'
+            'panel' => 'klopp_design_panel'
         )
     );
 

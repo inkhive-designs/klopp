@@ -14,9 +14,13 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info container">
-			<?php printf( __( 'Theme Designed by %1$s.', 'klopp' ), '<a href="'.esc_url("http://inkhive.com/").'" rel="designer">InkHive</a>' ); ?>
+            <span class="fc-line">
+                <?php printf( __( 'Theme Designed by %1$s.', 'klopp' ), '<a href="'.esc_url("http://inkhive.com/").'" rel="designer">InkHive</a>' ); ?>
+            </span>
 			<span class="sep"></span>
-			<?php echo ( get_theme_mod('klopp_footer_text') == '' ) ? ('&copy; '.date('Y').' '.get_bloginfo('name').__('. All Rights Reserved. ','klopp')) : esc_html(get_theme_mod('klopp_footer_text')); ?>
+            <span class="fcustom-text">
+                <?php echo ( get_theme_mod('klopp_footer_text') == '' ) ? ('&copy; '.date('Y').' '.get_bloginfo('name').__('. All Rights Reserved. ','klopp')) : esc_html(get_theme_mod('klopp_footer_text')); ?>
+            </span>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 	

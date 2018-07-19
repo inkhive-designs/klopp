@@ -4,7 +4,7 @@ function klopp_customize_register_social_icons($wp_customize){
     $wp_customize->add_section('klopp_social_section', array(
         'title' => __('Social Icons','klopp'),
         'priority' => 44 ,
-        'panel' => 'plum_header_panel'
+        'panel' => 'klopp_header_panel'
     ));
 
     $social_networks = array( //Redefinied in Sanitization Function.
@@ -30,7 +30,8 @@ function klopp_customize_register_social_icons($wp_customize){
 
     $wp_customize->add_setting('klopp_social_icon_style', array(
 	    'default' => 'none',
-	    'sanitize_callback' => 'klopp_sanitize_social_style'
+	    'sanitize_callback' => 'klopp_sanitize_social_style',
+        'transport'     => 'postMessage',
     ));
     
     function klopp_sanitize_social_style( $input ) {
@@ -63,7 +64,7 @@ function klopp_customize_register_social_icons($wp_customize){
         $wp_customize->add_setting(
             'klopp_social_'.$x, array(
             'sanitize_callback' => 'klopp_sanitize_social',
-            'default' => 'none'
+            'default' => 'none',
         ));
 
         $wp_customize->add_control( 'klopp_social_'.$x, array(

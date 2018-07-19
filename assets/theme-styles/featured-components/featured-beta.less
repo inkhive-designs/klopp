@@ -1,0 +1,43 @@
+#featured-area-2 {
+  margin-bottom: 20px;
+  margin-top: 45px;
+  .section-title {
+    margin-bottom: 30px;
+  }
+  .imgcontainer {
+    padding: 1px;
+
+    .popimage {
+      position: relative;
+      margin-bottom: 16px;
+      img {
+        width: 100%;
+        .transition(0.8s all ease);
+      }
+      .titledesc {
+        position: absolute;
+        width: 100%;
+        bottom: 0%;
+        padding: 15px 15px;
+        background: fade(@accent,75%);
+        pointer-events: none;
+        h2 { margin: 0; }
+        a {
+          color: @onaccent;
+          font-size: 18px;
+          font-weight: normal;
+          display: block;
+          text-align: center;
+          pointer-events: none;
+        }
+
+      }
+      &:hover {
+        img {
+          -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+        }
+      }
+    }
+  }
+}
