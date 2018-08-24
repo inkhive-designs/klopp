@@ -12,7 +12,7 @@
             $lastposts = get_posts( $args );
 
             foreach ( $lastposts as $post ) :
-                setup_postdata( $post ); ?>
+                //setup_postdata( $post ); ?>
 
 
                 <div class="col-md-4 col-sm-4 imgcontainer">

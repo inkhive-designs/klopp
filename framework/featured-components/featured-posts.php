@@ -6,13 +6,14 @@
 		</div>
 
     <div class="article-wrapper">
-    <?php if ( have_posts() ) : ?>
 				<?php /* Start the Loop */  ?>
 				<?php
-	    		$args = array( 'posts_per_page' => (get_theme_mod('klopp_featposts_rows') * 4), 'category' => get_theme_mod('klopp_featposts_cat') );
+	    		$args = array( 
+	    					'posts_per_page' => get_theme_mod('klopp_featposts_rows') * 4,
+	    					'category' 		 => get_theme_mod('klopp_featposts_cat') 
+						);
 				$lastposts = get_posts( $args );
-				foreach ( $lastposts as $post ) :
-				  setup_postdata( $post ); ?> 	
+				foreach ( $lastposts as $post ) : ?> 	
 
                     <article id="post-<?php the_ID(); ?>" <?php post_class('item col-md-3 col-sm-3 col-xs-6 '); ?>>
                         <div class="item-container">
@@ -31,8 +32,7 @@
 
 					
 				<?php endforeach; 
-				wp_reset_postdata();
-			 endif; ?>
+				wp_reset_postdata(); ?>
     </div>
 </div>
 

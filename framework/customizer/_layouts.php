@@ -22,7 +22,10 @@ function klopp_customize_register_layouts($wp_customize){
 
     $wp_customize->add_setting(
         'klopp_blog_layout',
-        array( 'sanitize_callback' => 'klopp_sanitize_blog_layout' )
+        array( 
+        	'default'			=> 'klopp',
+        	'sanitize_callback' => 'klopp_sanitize_blog_layout'
+        )
     );
 
     function klopp_sanitize_blog_layout( $input ) {
@@ -109,8 +112,10 @@ function klopp_customize_register_layouts($wp_customize){
     $wp_customize->add_setting(
         'klopp_sidebar_width',
         array(
-            'default' => 4,
-            'sanitize_callback' => 'klopp_sanitize_positive_number' )
+            'default' 			=> 4,
+            'sanitize_callback' => 'klopp_sanitize_positive_number',
+            'transport'			=>	'postMessage'
+        )
     );
 
     $wp_customize->add_control(

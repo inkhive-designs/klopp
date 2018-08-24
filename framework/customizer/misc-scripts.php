@@ -20,7 +20,7 @@ function klopp_customize_register_misc( $wp_customize ) {
 	        $wp_customize,
 	        'klopp_pro',
 	        array(
-                'description'	=> '<a class="klopp-important-links" href="https://inkhive.com/contact-us/" target="_blank">'.__('InkHive Support Forum', 'klopp').'</a>
+                'description'	=> '<a class="klopp-important-links" href="https://inkhive.com/contact-us/" target="_blank">'.__('InkHive Support', 'klopp').'</a>
                                     <a class="klopp-important-links" href="http://demo.inkhive.com/klopp-plus/" target="_blank">'.__('Klopp Plus Live Demo', 'klopp').'</a>
                                     <a class="klopp-important-links" href="https://www.facebook.com/inkhivethemes/" target="_blank">'.__('We Love Our Facebook Fans', 'klopp').'</a>
                                     <a class="klopp-important-links" href="https://wordpress.org/support/theme/klopp/reviews" target="_blank">'.__('Review Klopp on WordPress', 'klopp').'</a>',

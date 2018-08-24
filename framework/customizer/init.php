@@ -48,3 +48,9 @@ function klopp_customize_preview_js() {
     }
 }
 add_action( 'customize_preview_init', 'klopp_customize_preview_js' );
+
+
+function klopp_customize_control_js() {
+		wp_enqueue_script( 'klopp_customize_control', get_template_directory_uri() . '/js/customize-control.js', array(), '', true );
+}
+add_action( 'customize_controls_enqueue_scripts', 'klopp_customize_control_js' );

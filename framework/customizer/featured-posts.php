@@ -15,7 +15,6 @@ function klopp_customize_register_featured_posts($wp_customize){
         'klopp_featposts_enable',
         array(
             'sanitize_callback' => 'klopp_sanitize_checkbox',
-            'transport'     => 'postMessage'
         )
     );
 
@@ -32,8 +31,9 @@ function klopp_customize_register_featured_posts($wp_customize){
     $wp_customize->add_setting(
         'klopp_featposts_title',
         array(
+	        'default'			=> '',
             'sanitize_callback' => 'sanitize_text_field',
-            'transport'     => 'postMessage'
+            'transport'     	=> 'postMessage'
         )
     );
 
@@ -68,7 +68,10 @@ function klopp_customize_register_featured_posts($wp_customize){
 
     $wp_customize->add_setting(
         'klopp_featposts_rows',
-        array( 'sanitize_callback' => 'klopp_sanitize_positive_number' )
+        array( 
+	        'default'			=> 0,
+        	'sanitize_callback' => 'klopp_sanitize_positive_number',
+        	)
     );
 
     $wp_customize->add_control(
@@ -77,7 +80,6 @@ function klopp_customize_register_featured_posts($wp_customize){
             'label'    => __( 'Max No. of Rows.', 'klopp' ),
             'section'  => 'klopp_featposts',
             'type'     => 'number',
-            'default'  => '0'
         )
     );
 
@@ -94,8 +96,8 @@ function klopp_customize_register_featured_posts($wp_customize){
     $wp_customize->add_setting(
         'klopp_fa2_enable',
         array(
+	        'default'			=> '',
             'sanitize_callback' => 'klopp_sanitize_checkbox',
-            'transport'     => 'postMessage',
         )
     );
 
